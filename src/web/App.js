@@ -11,7 +11,7 @@ const App = ({ store }) => {
     localStorage.setItem('Theme', 'dark');
     // si se usa media query eliminar linea 11, descomentar 10 y parte de 14
     const getTheme = localStorage.getItem('Theme');
-    const condition = getTheme === 'dark' || getTheme === 'light'; //? getTheme === 'dark' : prefersDarkMode;
+    const condition = getTheme === 'dark'; //|| getTheme === 'light' ? getTheme === 'dark' : prefersDarkMode;
     if (condition) {
         document.body.classList.add('dark-mode');
     }
