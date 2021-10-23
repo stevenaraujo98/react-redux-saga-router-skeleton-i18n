@@ -13,6 +13,7 @@ const App = ({ store }) => {
     const getTheme = localStorage.getItem('Theme');
     const condition = getTheme === 'dark'; //|| getTheme === 'light' ? getTheme === 'dark' : prefersDarkMode;
     if (condition) {
+        document.body.classList.remove('light-mode');
         document.body.classList.add('dark-mode');
     }
 
